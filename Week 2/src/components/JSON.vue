@@ -85,9 +85,17 @@
 
       <h3>Working with Arrays in Objects</h3>
       <!-- Activity 12: Get the top sellers from the bookstores object. -->
-      <!-- TODO: CODE TO GET TOP SELLERS HERE -->
-      <p>We operate in:</p>
-      <p>Our #1 seller:</p>
+      <ul>
+        <li v-for="book in bookstores.topSellers" :key="book">
+          {{ book }}
+        </li>
+      </ul>
+      <p>We operate in:
+        <li v-for="country in bookstores.countries" :key="country">
+          {{ country }}
+        </li>
+      </p>
+      <p>Our #1 seller: {{ bookstores.topSellers[0] }}</p>
     </section>
 
     <section class="lab-section">
